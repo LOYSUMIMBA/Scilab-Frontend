@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Materials and Equipment</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <img src="imcc.png" alt="School Logo" class="logo">
+        <span class="nav-title">SciLab</span>
+    </nav>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="request-list.html"><i class="fas fa-list"></i>Request List</a></li>
+                <li><a href="reports.html"><i class="fas fa-chart-bar"></i>Reports</a></li>
+                <li class="active"><a href="list-materials.html"><i class="fas fa-boxes"></i>List Materials</a></li>
+                <li><a href="return.html"><i class="fas fa-undo"></i>Return</a></li>
+                <li><a href="register.html"><i class="fas fa-user-plus"></i>Register</a></li>
+            </ul>
+            <ul class="logout">
+                <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <div class="list-materials-grid">
+                <!-- Materials List Card -->
+                <div class="card1">
+                    <h3>List Materials and Equipment</h3>
+
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search materials, suppliers, order dates...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <!-- Materials Table -->
+                    <table id="materialsTable">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Size</th>
+                                <th>In</th>
+                                <th>Out</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Test Tube</td>
+                                <td>100</td>
+                                <td>25ml</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Beaker</td>
+                                <td>50</td>
+                                <td>500ml</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Microscope</td>
+                                <td>30</td>
+                                <td>-</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Pipette</td>
+                                <td>90</td>
+                                <td>10ml</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <!-- Add more material rows as necessary -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for search functionality -->
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            table = document.getElementById('materialsTable');
+            tr = table.getElementsByTagName('tr');
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName('td');
+                for (var j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

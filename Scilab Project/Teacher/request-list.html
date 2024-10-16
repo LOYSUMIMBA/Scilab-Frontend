@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request List</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <img src="imcc.png" alt="School Logo" class="logo">
+        <span class="nav-title">SciLab</span>
+    </nav>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li class="active"><a href="request-list.html"><i class="fas fa-list"></i>Request List</a></li>
+                <li><a href="reports.html"><i class="fas fa-chart-bar"></i>Reports</a></li>
+                <li><a href="list-materials.html"><i class="fas fa-boxes"></i>List Materials</a></li>
+                <li><a href="return.html"><i class="fas fa-undo"></i>Return</a></li>
+                <li><a href="register.html"><i class="fas fa-user-plus"></i>Register</a></li>
+            </ul>
+            <ul class="logout">
+                <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </aside>
+
+        <div class="request-list-container">
+            <div class="request-list-header">
+                <h2>Request List</h2>
+                <div class="request-list-actions">
+                    <button>Filters</button>
+                    <button>Download all</button>
+                </div>
+            </div>
+            
+            <table class="request-table">
+                <thead>
+                    <tr>
+                        <th>Control ID</th>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Time Schedule</th>
+                        <th>Time of Request</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00001</td>
+                        <td>Sarah B. Speed</td>
+                        <td>Biochem</td>
+                        <td>1:00-3:00 PM Mon</td>
+                        <td>12/09/24</td>
+                        <td><span class="status approved">Approved</span></td>
+                    </tr>
+                    <tr>
+                        <td>00002</td>
+                        <td>John R. Sparta</td>
+                        <td>Biochem</td>
+                        <td>1:30-4:00 PM Tues</td>
+                        <td>10/04/24</td>
+                        <td><span class="status declined">Declined</span></td>
+                    </tr>
+                    <tr>
+                        <td>00003</td>
+                        <td>June L. Christmas</td>
+                        <td>Chemistry</td>
+                        <td>10:00-12:00 PM Wed</td>
+                        <td>10/08/24</td>
+                        <td><span class="status approved">Approved</span></td>
+                    </tr>
+                    <tr>
+                        <td>00009</td>
+                        <td>Three P. Grade</td>
+                        <td>Chemistry</td>
+                        <td>10:30-12:00 AM Tues</td>
+                        <td>11/11/24</td>
+                        <td><span class="status pending">Pending</span></td> <!-- Pending Status Added -->
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="pagination">
+                <button class="pagination-btn">Previous</button>
+                <span>Page 1 of 1</span>
+                <button class="pagination-btn">Next</button>
+            </div>
+        </div>
+        
+</div>
+
+</div>
+</body>
+</html>

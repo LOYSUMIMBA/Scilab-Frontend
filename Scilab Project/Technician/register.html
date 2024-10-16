@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Register</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <img src="imcc.png" alt="School Logo" class="logo">
+        <span class="nav-title">SciLab</span>
+    </nav>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="request-list.html"><i class="fas fa-list"></i>Request List</a></li>
+                <li><a href="reports.html"><i class="fas fa-chart-bar"></i>Reports</a></li>
+                <li><a href="list-materials.html"><i class="fas fa-boxes"></i>List Materials</a></li>
+                <li><a href="return.html"><i class="fas fa-undo"></i>Return</a></li>
+                <li class="active"><a href="register.html"><i class="fas fa-user-plus"></i>Register</a></li>
+            </ul>
+            <ul class="logout">
+                <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <div class="card1">
+                <h2>Teacher Register</h2>
+                <form action="" method="post" class="register-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idno">ID No.</label>
+                        <input type="text" id="idno" name="idno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="register-btn">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
