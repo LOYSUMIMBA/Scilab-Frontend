@@ -131,49 +131,93 @@ nav {
     padding: 20px;
     min-height: 100vh;
 }
-
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    grid-gap: 20px; /* Space between boxes */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "schedule overview"
+        "request-list request-list";
+    grid-gap: 20px;
 }
 
+/* Cards Styling */
 .card {
-    background-color: white; /* Set background color to white */
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for visibility */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-/* Table styling */
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.schedule {
+    grid-area: schedule;
+}
+
+.request-overview {
+    grid-area: overview;
+}
+
+.request-list {
+    grid-area: request-list;
+}
+
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
 table th, table td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+    padding: 10px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 table th {
     background-color: #f1f1f1;
+    font-weight: bold;
 }
 
-.calendar, .request-overview {
-    margin-top: 20px;
+.approved {
+    color: #28a745;
+    font-weight: bold;
 }
 
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 6000px;
-    margin: auto;
-    margin-top: 50px;
+.declined {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.pending {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Request Overview Styling */
+.overview-stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.overview-stats div {
     text-align: center;
+}
+
+.overview-stats h4 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.overview-stats p {
+    margin: 5px 0 0;
+    color: #666;
 }
 
 /* Form layout */

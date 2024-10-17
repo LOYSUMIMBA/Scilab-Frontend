@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-width Navbar</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="/Teacher/CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -30,8 +30,8 @@
 
         <div class="content">
             <div class="dashboard-grid">
-                <!-- Class Schedule Table -->
-                <div class="card">
+                <!-- Class Schedule Card -->
+                <div class="card schedule">
                     <h3>Class Schedule</h3>
                     <table>
                         <thead>
@@ -41,41 +41,70 @@
                                 <th>Type</th>
                                 <th>Time</th>
                                 <th>Date</th>
-                                <th>Data</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Biochem</td>
                                 <td>Material</td>
-                                <td>Type</td>
+                                <td>Lab</td>
                                 <td>1:00-3:00 Mon</td>
                                 <td>11/11/24</td>
-                                <td>Data</td>
                             </tr>
-                            <tr>
-                                <td>Biology</td>
-                                <td>Material</td>
-                                <td>Type</td>
-                                <td>10:00-12:00 Tue</td>
-                                <td>11/12/24</td>
-                                <td>Data</td>
-                            </tr>
-                            <!-- Repeat similar rows -->
+                            <!-- Add additional rows as needed -->
                         </tbody>
                     </table>
                 </div>
-    
-                <!-- Calendar -->
-                <div class="card calendar">
-                    <h3>March 2023</h3>
-                    <p>Calendar goes here...</p>
-                </div>
-    
-                <!-- Request Overview -->
+
+                <!-- Request Overview Card -->
                 <div class="card request-overview">
                     <h3>Request Overview</h3>
-                    <p>Overview details here...</p>
+                    <div class="overview-stats">
+                        <div>
+                            <h4>82</h4>
+                            <p>Gowns</p>
+                        </div>
+                        <div>
+                            <h4>173</h4>
+                            <p>Materials</p>
+                        </div>
+                        <div>
+                            <h4>110</h4>
+                            <p>Approved</p>
+                        </div>
+                        <div>
+                            <h4>40</h4>
+                            <p>Returns</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Request List -->
+                <div class="card request-list">
+                    <h3>Request List</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Subject</th>
+                                <th>Schedule</th>
+                                <th>Request Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00091</td>
+                                <td>Sarah B. Speed</td>
+                                <td>Biochem</td>
+                                <td>10:00-12:00 Mon</td>
+                                <td>12/01/24</td>
+                                <td class="approved">Approved</td>
+                            </tr>
+                            <!-- Add additional rows as needed -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
