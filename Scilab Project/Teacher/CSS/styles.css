@@ -7,7 +7,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    position: fixed;
 }
 
 /* Navigation bar styling */
@@ -131,131 +130,70 @@ nav {
     padding: 20px;
     min-height: 100vh;
 }
+
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "schedule overview"
-        "request-list request-list";
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns for the top */
     grid-gap: 20px;
 }
 
-/* Cards Styling */
+/* Separate the top and bottom rows */
+.top-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-gap: 20px;
+}
+
+.bottom-row {
+    grid-column: span 2; /* Make Request List span the entire width */
+    margin-top: -50px;
+}
+
+/* Card styling remains the same */
 .card {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #333;
-}
 
-.schedule {
-    grid-area: schedule;
-}
 
-.request-overview {
-    grid-area: overview;
-}
 
-.request-list {
-    grid-area: request-list;
-}
-
-/* Table Styling */
+/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
 table th, table td {
-    padding: 10px;
-    text-align: left;
+    padding: 12px;
     border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
 table th {
     background-color: #f1f1f1;
-    font-weight: bold;
 }
 
-.approved {
-    color: #28a745;
-    font-weight: bold;
+.calendar, .request-overview {
+    margin-top: 20px;
 }
 
-.declined {
-    color: #dc3545;
-    font-weight: bold;
-}
-
-.pending {
-    color: #ffc107;
-    font-weight: bold;
-}
-
-/* Request Overview Styling */
-.overview-stats {
-    display: flex;
-    justify-content: space-around;
-}
-
-.overview-stats div {
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 6000px;
+    margin: auto;
+    margin-top: 50px;
     text-align: center;
 }
 
-.overview-stats h4 {
-    font-size: 24px;
-    margin: 0;
-    color: #333;
-}
-
-.overview-stats p {
-    margin: 5px 0 0;
-    color: #666;
-}
-
-/* Form layout */
-.register-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-
-/* Input styling */
-input {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 90%;
-}
-
-/* Button styling */
-.register-btn {
-    background-color: #FF6289;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    grid-column: span 2; /* Span across both columns */
-}
-
-.register-btn:hover {
-    background-color: #e85779;
+.request-overview p {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;    /* Hide any overflow */
 }
 
 /* Headings */

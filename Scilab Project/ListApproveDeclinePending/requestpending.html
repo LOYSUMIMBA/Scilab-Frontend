@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Pending</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .info-row p {
+            margin: 0;
+            font-size: 1em;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .radio-group label {
+            margin: 0 15px;
+            font-size: 1em;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .approve {
+            background-color: #ff3399;
+            color: white;
+        }
+        .decline {
+            background-color: #ff4d4d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>ID NO: 00009</div>
+        <div>CONTROL NO: 232323</div>
+        <div>LAB GOWN</div>
+    </div>
+
+    <div class="section">
+        <div class="info-row">
+            <p><strong>Name:</strong> Three P. Grade</p>
+            <p><strong>Department:</strong> CHEM</p>
+        </div>
+        <div class="info-row">
+            <p><strong>Course & Year:</strong> CHEM - 3rd Year</p>
+            <p><strong>Time:</strong> 10:30 - 12:00 AM Tues</p>
+        </div>
+        <div class="info-row">
+            <p><strong>Date Borrowed:</strong> 11/14/22</p>
+            <p><strong>Contact No:</strong> 0921312138183</p>
+        </div>
+    </div>
+
+    <div class="radio-group">
+        <label><input type="radio" name="item" value="lab_gown"> Lab Gown</label>
+        <label><input type="radio" name="item" value="lab_apron"> Lab Apron</label>
+    </div>
+
+    <div class="buttons">
+        <button class="button approve">Approve</button>
+        <button class="button decline">Decline</button>
+    </div>
+</div>
+
+</body>
+</html>
